@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.toyota";
+option java_outer_classname = "Vips";
+option objc_class_prefix = "HLW";
+
+package com.toyota;
+
+service VipsService {
+  rpc send (VipsRequest) returns (VipsReply) {}
+}
+
+message VipsRequest {
+  string name = 1;
+}
+
+message VipsReply {
+  string message = 1;
+}
